@@ -1,0 +1,873 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,14,1.9),rgba(4,9,14,0.4)),url('library2.jfif');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.logo{
+    display: flex;
+}
+.logo img{
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+}
+.logo h1{
+    font-size: 30px;
+    font-weight: 600px;
+    color: blue;
+    margin-top: 20px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 3px solid #a8c8e6;;
+}       
+.navlist{
+    margin-top: 2px;
+    margin-right: 5px;
+}
+.navlist a{
+    text-decoration: none;
+    padding: 10px 5px;
+    color: blue;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+.navlist a:hover{
+    transform: scale(1.3);
+    text-decoration: underline;
+}
+.navlist button{
+    text-decoration: none;
+    padding: 5px 5px;
+    color: blue;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 10px;
+    background: none;
+    outline: none;
+    width: 100px;
+    transition: 1s;
+}
+.navlist button:hover{
+    background-color: #1e44f0;
+    color: black;
+}
+/*.blurbacklogin{
+    visibility: hidden;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background: rgba(3, 3, 3, 0.6);
+    transition: all 0.4s;
+}
+.blurbacklogin.active{
+    visibility: visible;
+    opacity: 1;
+}*/
+.login-box{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 400px;
+    padding: 10px 30px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    height: 500px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.login-box.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.login-box .form1 .close1{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    font-size: 29px;
+    color: black;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+}
+.login-box .form1 .close1:hover{
+    transform: scale(1.02); 
+}
+.form1 h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 800;
+    margin: 10px 0 50px 0;
+}
+.form1 .input{
+    margin: 20px 0;
+}
+.form1 .input input{
+    width: 400px;
+    border: none;
+    border-bottom: 3px solid black;
+    padding: 8px 0px;
+    font-size: 16px;
+    background: none;
+    outline: none;
+}
+.form1 .input span{
+    position: absolute;
+    left: 0px;
+    margin: 0px 30px;
+    padding: 5px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: black;
+    background: none;
+    font-weight: 600;
+}
+.form1 .input input:valid ~ span,
+.form1 .input input:focus ~ span{
+    font-size: 17px;
+    transform: translateY(-20px);
+}
+.form1 .check-box1{
+    margin: 0 5px 15px 0;
+}
+.form1 input[type="submit"]{
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #1e44f0;
+    border-radius: 10px;
+    margin: 0px 0 10px 90px;
+}
+.form1 input[type="submit"]:hover{
+    background-color: #4966e7;
+}
+.form1 .links1{
+    font-size: 17px;
+    font-weight: 600;
+}
+.form1 .links1 .forgot{
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.form1 .links1 .no-account{
+    margin: 10px 0 15px 68px;
+}
+.other-login{
+    display: block;
+}
+.other-login .label1 label{
+    margin: 0px 0 0px 120px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.other-login img{
+    height: 50px;
+    width: 50px;
+    margin: 10px 0 0 45px;
+    padding: 5px;
+}
+.signup-box{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 420px;
+    height: 587px;
+    padding: 10px 30px;
+    background-color: aliceblue;
+    border-radius: 10px; 
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.signup-box.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.signup-box .close2{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    font-size: 29px;
+    color: black;
+    text-align: center;
+    line-height: 15px;
+    
+    cursor: pointer;
+}
+.signup-box .close2:hover{
+    transform: scale(1.02);   
+}
+.other-login1{
+    display: block;
+}
+.form2 h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 800;
+    margin: 0px 0 13px 0;
+}
+.signup-box .form2 fieldset{
+    height: 320px;
+    width: 420px;
+    border-radius: 10px;
+    padding: 20px 0 10px;
+}
+.signup-box .form2 fieldset legend{
+    font-size: 20px;
+    font-weight: 600;
+}
+.form2 .input2{
+    padding: 12px 20px 0;
+}
+.form2 .input2 input{
+    width: 377px;
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 8px 0px 5px;
+    font-size: 16px;
+    background: none;
+    outline: none;
+}
+.form2 .input2 span{
+    position: absolute;
+    left: 5px;
+    margin: 0px 30px ;
+    padding: 5px 17px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: black;
+    background: none;
+    font-weight: 600;
+}
+.form2 .input2 input:valid ~ span,
+.form2 .input2 input:focus ~ span{
+    font-size: 17px;
+    transform: translateY(-17px);
+}
+.input2-checkbox {
+    margin-top: 10px;
+}
+.input2-checkbox input{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin: 0px 0 5px 2px;
+}
+.input2-checkbox span{
+    font-size: 15px;
+    margin: 15px 0 5px 28px;
+}
+.submit2 input[type="submit"]{
+    height: 30px;
+    width: 150px;
+    font-size: 18px;
+    margin: 3px 0 5px 130px;
+    border-radius: 10px;
+    background-color: #2D669D;
+}
+.submit2 input[type="submit"]:hover{
+    background-color: #1e44f0;
+}
+.have-account{
+    margin: 2px 0 3px 100px;
+}
+.other-login1 .label2 label{
+    margin: 0px 0 0px 130px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.other-login1 img{
+    height: 50px;
+    width: 50px;
+    margin: 2px 0 0 45px;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container1{
+    margin-top: 100px;
+    margin-left: 20px;
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0s;
+    width: 800px;
+}
+.introduce h1{
+    font-size: 50px;
+    align-items: center;
+    font-weight: bold;
+}
+.introduce h1 span{
+    color: #4966e7;
+    font-weight: bolder;
+}
+@keyframes moving{
+    from{transform: translateY(130PX);}
+    to{transform: translateY(0px);}
+}
+.introduce p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 35px;
+}
+.button1 button{
+    height: 40px;
+    width: 150px;
+    margin-left: 10px;
+    margin-top: 20px;
+    background-color: #2D669D;
+    box-shadow: 2px 2px;
+}
+.button1 button a{
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+}
+.button1 button:hover{
+    background-color: blue;
+    transform: scale(1.02);
+}
+.footer{
+    background-color: #2D669D;
+    border: 1px solid black;
+}
+.information{
+    display: flex;
+}
+.follow{
+    float: right;
+    margin-left: 200px;
+}
+.follow h1{
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 20px;
+}
+.follow h1 span{
+    font-weight: bold;
+    color: blue;
+}
+.follow img{
+    height: 30px;
+    width: 30px;
+    margin-left: 25px;
+}
+.info{
+    display: flex;
+}
+.info img{
+    height: 90px;
+    width: 70px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.info h2{
+    margin-top: 32px;
+    font-size: 24;
+}
+.logo1{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.logo1 img{
+    height: 40px;
+    width: 40px;
+}
+.logo1 h1{
+    margin-top: 5px;
+}
+.logo1 p{
+    margin-top: 17px;
+    margin-left: 14px;
+}
+.last-lists{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.categories{
+    display: block;
+}
+.categories dt{
+    font-size: 25px;
+    font-family:  sans-serif;
+    text-decoration: underline;
+}
+.categories dd a{
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 10px;
+    margin-left: 20px;
+    color: black;
+}
+.categories dd a:hover{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+.help{
+    margin-left: 200px;
+}
+.help dt{
+    font-size: 25px;
+    font-family:  sans-serif;
+    text-decoration: underline;
+}
+.help dd a{
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 10px;
+    margin-left: 20px;
+    color: black;
+}
+.help dd a:hover{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+.last-lists{
+    display: flex;
+}
+.company{
+    margin-left: 200px;
+}
+.company dt{
+    font-size: 25px;
+    font-family:  sans-serif;
+    text-decoration: underline;
+}
+.company dd a{
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 10px;
+    margin-left: 20px;
+    color: black;
+}
+.company dd a:hover{
+    text-decoration: underline;
+    font-weight: bolder;   
+}
+.copy{
+    margin: 20px 450px 20px;
+    font-size: 20px;
+}
+.content{
+    max-height: 100%;
+    display: flex;
+    background-image: url('rm222-mind-30.jpg');
+    background-size: cover;
+}
+.enjoy{
+    margin: 150px 10px 150px 50px;
+}
+.enjoy h1{
+    font-size: 40px;
+    color: blue;
+}
+.enjoy p{
+    margin-top: 30px;
+    font-size: 30px;
+}
+.enjoy button{
+    height: 37px;
+    width: 140px;
+    margin-top: 28px;
+    background-color: #2D669D;
+}
+.enjoy button a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+.enjoy button:hover{
+    background-color: blue;
+    transform: scaleX(1.02);
+}
+.pages{
+    width: 100%;
+    height: 600px;
+    background-image: url('Novel1.jfif');
+    background-size: cover;
+    margin-top: 50px;
+    margin-left: 50px;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    animation-delay: 3.3s;
+    animation-fill-mode: ease-in;
+    animation-duration: 17s;
+    animation-timing-function: linear;
+    margin-bottom: 20px;
+    border-radius: 20px;    
+}
+@keyframes slide {
+    10%{
+        background-image: url('75 Books Every Man Should Read.jpeg');
+        background-size: cover;
+    }
+    20%{
+        background-image: url('12 Stunning Books New in Paperback to Fill Your Shelves.jpeg');
+        background-size: cover;
+    }
+    30%{
+        background-image: url('43 Chilling Thriller Books You Need to Read.jpeg');
+        background-size: cover;
+    }
+    40%{
+        background-image: url('Book Review of A Man Called Ove_ A Novel - Positively Stacey.jpeg');
+        background-size: cover;
+    }
+    50%{
+        background-image: url('The Girl with Seven Names_ A North Korean Defector’s Tale_ A North Korean Defector’s Story.jpeg');
+        background-size: cover;
+    }
+    60%{
+        background-image: url('Novel2.jfif');
+        background-size: cover;
+    }
+    70%{
+        background-image: url('Novel3.jfif');
+        background-size: cover;
+    }
+    80%{
+        background-image: url('Novel4.jfif');
+        background-size: cover;
+    }
+    90%{
+        background-image: url('Novel5.jfif');
+        background-size: cover;
+    }
+    100%{
+        background-image: url('Taming 7 (Boys of Tommen Book 5).jpeg');
+        background-size: cover;
+    }
+}
+.body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+.container {
+  max-width: 1259px;
+  width: 100%;
+  padding: 40px 0;
+  background-color: rgba(192, 210, 214, 0.322);
+  border-radius: 20px;
+}
+
+.slide-container {
+  margin: 0 30px;
+  overflow: hidden;
+}
+.card {
+  background: linear-gradient(rgba(123, 131, 241, 0.576),rgba(31, 44, 228, 0.576));
+  border-radius: 8px;
+}
+.card .types {
+  height: 400px;
+  width: 250px;
+}
+.card .types h1{
+  font-size: 28px;
+  font-weight: 300px;
+  color: #1e44f0;
+  margin-top: 10px;
+  margin-left: 90px;
+}
+
+.picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(102, 122, 247);
+    margin:  0px 110px;
+    border-style: inset;
+    border-bottom: 2px solid black;
+    position: static;
+    z-index: 100;
+}
+.picture span{
+    background-color: rgb(102, 122, 247);
+    height: 339px;
+    width: 285px;
+    left: 0px;
+    position: absolute;
+    margin-bottom: 0;
+    margin-top: 30px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.picture span p{
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: 200px;
+}
+.picture span button{
+    height: 38px;
+    width: 190px;
+    background-color: aqua;
+    border-radius: 20px;
+    align-items: bottom;
+    justify-content: center;
+    transition: 0.2s;
+}
+.picture span button:hover{
+    opacity: 1.2;
+    transform: scale(0.999);
+}
+.picture span button a{
+    text-decoration: none;
+    font-size: 19px;
+    color: #000;
+    transition: 1.0s;
+}
+.picture span button a:hover{
+    font-size: 21px;
+    font-weight: 900px;
+}
+.swiper-navBtn {
+  height: 60px;
+  width: 60px;
+  background: #fff;
+  border-radius: 30%;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 10px;
+}
+.swiper-pagination-bullet {
+  background-color: #000;
+}
+.cards-how{
+    height: 115vh;
+    background-color: #eee;
+    position: static;
+    align-content: center;
+}
+.cards-how .how-head{
+    font-size: 28px;
+    font-weight: 600;
+    color: blue;
+    margin: 0px 0 10px 400px;
+    padding-top: 18px;
+}
+.cards-how .joined-how{
+    display: flex;
+    margin: 20px 0 20px 280px;
+}
+.cards-how .joined-how .number1{
+    font-size: 80px;
+    font-weight: 900;
+    border: 0px solid blue;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100px;
+    margin: 10px 0 10px 20px;
+    background-color: #4966e7;
+}
+.cards-how .joined-how .number1 p{
+    margin: 0 0 0 25px;
+}
+.cards-how .joined-how .content-how{
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid blue;
+    height: 91px;
+    width: 600px;
+    margin-top: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+.cards-how .joined-how .content-how p{
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about{
+    background-image: linear-gradient(rgba(4,9,20,0.2),rgba(4,9,20,0.1)) ,url('background.jpg');
+    background-size: cover;
+    height: 100vh;
+    margin-top: 0px;
+    display: block;
+}
+.about h1{
+     margin: 0px 0px 0px 600px;
+     font-size: 40px;
+     color: blue;
+}
+.container2{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.container2 form{
+    height: 420px;
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    backdrop-filter: blur(1400px);
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+.container2 h1{
+   margin: 20px 200px 0 159px;
+   width: 500px;
+   text-align: center;
+}
+.container2 form .input-box{
+   position: relative;
+   width: 50%;
+   margin-top: 10px;
+}
+.container2 form .input-box input{
+    width: 80%;
+    border: none;
+    margin: 10px 30px;
+    padding: 5px 0px;
+    font-size: 16px;
+    background: none;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+.container2 form .input-box span{
+    position: absolute;
+    left: 0px;
+    margin: 10px 30px;
+    padding: 5px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: black;
+    background: none;
+}
+.container2 .input-box input:valid ~ span,
+.container2 .input-box input:focus ~ span{
+    font-size: 15px;
+    transform: translateY(-20px);
+}
+.container2 form #lastname,
+.container2 form #number{
+    left: 0px;
+}
+.container2 form .textarea-side h3{
+    font-weight: 300px;
+    width: 500px;
+    color: #000;
+    margin: 10px 100px 0px 10px;
+    font-size: 18px;
+}
+.container2 form textarea{
+    border: none;
+    font-size: 15px;
+    border-bottom: 2px solid #000;
+    background: none;
+    color: black;
+    font-weight: 200;
+    padding: 10px;
+    outline: none;
+    max-width: 600px;
+    min-width: 567px;
+    max-height: 80px;
+    min-height: 80px;
+    margin-left: 0px;
+}
+.container2 form #button{
+    border: none;
+    height: 40px;
+    background: #11dfb256;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 23px;
+    width: 100px;
+    padding: 0;
+    margin-right: 410px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+.container2 form #button:hover{
+    opacity: 0.8;
+}
+.about2 img{
+    width: 70px;
+    height: 70px;
+    margin: 10px 0 0 69px;
+}
