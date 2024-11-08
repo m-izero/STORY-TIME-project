@@ -3,3 +3,23 @@
     box-sizing: border-box;
     padding: 0;
 }
+.logo{
+    display: flex;
+}
+.logo img{
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+}
+.logo h1{
+    font-size: 30px;
+    font-weight: 600px;
+    color: blue;
+    margin-top: 20px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 3px solid #a8c8e6;;
+}       
