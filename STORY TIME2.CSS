@@ -22,4 +22,10 @@
     justify-content: space-between;
     position: relative;
     border-bottom: 3px solid #a8c8e6;;
-}       
+}  
+.navlist .premium img{
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    margin-right: 140px;
+}     

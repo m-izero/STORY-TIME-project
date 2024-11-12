@@ -8,7 +8,7 @@
 .header{
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,14,1.9),rgba(4,9,14,0.4)),url('library2.jfif');
+    background-image: linear-gradient(rgba(4,9,14,1.9),rgba(4,9,14,0.4)),url('PHOTOS PJ/library2.jfif');
     background-position: center;
     background-size: cover;
     position: relative;
@@ -555,43 +555,43 @@
 }
 @keyframes slide {
     10%{
-        background-image: url('75 Books Every Man Should Read.jpeg');
+        background-image: url('PHOTOS PJ/75 Books Every Man Should Read.jpeg');
         background-size: cover;
     }
     20%{
-        background-image: url('12 Stunning Books New in Paperback to Fill Your Shelves.jpeg');
+        background-image: url('PHOTOS PJ/12 Stunning Books New in Paperback to Fill Your Shelves.jpeg');
         background-size: cover;
     }
     30%{
-        background-image: url('43 Chilling Thriller Books You Need to Read.jpeg');
+        background-image: url('PHOTOS PJ/43 Chilling Thriller Books You Need to Read.jpeg');
         background-size: cover;
     }
     40%{
-        background-image: url('Book Review of A Man Called Ove_ A Novel - Positively Stacey.jpeg');
+        background-image: url('PHOTOS PJ/Book Review of A Man Called Ove_ A Novel - Positively Stacey.jpeg');
         background-size: cover;
     }
     50%{
-        background-image: url('The Girl with Seven Names_ A North Korean Defector’s Tale_ A North Korean Defector’s Story.jpeg');
+        background-image: url('PHOTOS PJ/The Girl with Seven Names_ A North Korean Defector’s Tale_ A North Korean Defector’s Story.jpeg');
         background-size: cover;
     }
     60%{
-        background-image: url('Novel2.jfif');
+        background-image: url('PHOTOS PJ/Novel2.jfif');
         background-size: cover;
     }
     70%{
-        background-image: url('Novel3.jfif');
+        background-image: url('PHOTOS PJ/Novel3.jfif');
         background-size: cover;
     }
     80%{
-        background-image: url('Novel4.jfif');
+        background-image: url('PHOTOS PJ/Novel4.jfif');
         background-size: cover;
     }
     90%{
-        background-image: url('Novel5.jfif');
+        background-image: url('PHOTOS PJ/Novel5.jfif');
         background-size: cover;
     }
     100%{
-        background-image: url('Taming 7 (Boys of Tommen Book 5).jpeg');
+        background-image: url('PHOTOS PJ/Taming 7 (Boys of Tommen Book 5).jpeg');
         background-size: cover;
     }
 }
